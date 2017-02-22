@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_contact_lessones"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ofirnagadi.ofirnagadi.project.ContactLessonesActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e1e1e1"
+        android:layout_weight="1"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_prson"
+            android:id="@+id/imageView"
+            android:layout_weight="0.65"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:text="@string/inContactNametextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/inContactNametextView"
+            android:gravity="center"
+            android:textColor="#18517f"
+            android:textSize="24sp"
+            android:padding="5dp"
+            android:textStyle="normal|bold"
+            android:fontFamily="casual" />
+
+        <TextView
+            android:text="@string/inContactAreatextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/inContactAreatextView"
+            android:textColor="#18517f"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:fontFamily="casual"
+            android:textStyle="normal|bold" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:weightSum="1">
+
+            <TextView
+                android:text="@string/inContactPhonetextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/inContactPhonetextView"
+                android:gravity="center"
+                android:textColor="#18517f"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:paddingRight="50dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_action_name"
+                android:id="@+id/inContactPhoneImageButton"
+                android:layout_weight="3.35"
+                android:background="#e1e1e1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.29">
+
+            <Button
+                android:text="@string/inContactDeleteButton"
+                android:layout_width="match_parent"
+                android:id="@+id/inContactDeleteButton"
+                android:layout_weight="1"
+                android:background="#c91d12"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+
+            <Button
+                android:text="@string/inContactAddButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/inContactAddButton"
+                android:layout_weight="1"
+                android:background="#f2efb3"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contactLessonesList"
+        android:layout_weight="1"/>
+</LinearLayout>

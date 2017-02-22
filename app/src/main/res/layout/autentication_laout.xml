@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#000">
+
+    <TextView
+        android:text="@string/autenticationSureTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/autenticationSureTextView"
+        android:textSize="35sp"
+        android:textColor="#fff"
+        android:textStyle="normal|bold"
+        android:gravity="center" />
+    <View
+        android:layout_width="match_parent"
+        android:background="#eeeeee"
+        android:layout_height="3dp"
+        android:paddingBottom="20dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/autenticationSetLoessonTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/autenticationSetLoessonTextView"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:padding="15dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="@string/autenticationDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/autenticationDateTextView"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:text="@string/autenticationFromTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/autenticationFromTextView"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:textSize="24sp" />
+
+        <TextView
+            android:text="@string/autenticationFromTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/autenticationFromTimeTextView"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:textColor="#fff"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="@string/autenticationToTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/autenticationToTextView"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:textSize="24sp" />
+
+        <TextView
+            android:text="@string/autenticationToTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/autenticationToTimeTextView"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:textColor="#fff"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:background="#eeeeee"
+        android:layout_height="5dp"
+        android:paddingTop="50dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="@string/autenticationNoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/autenticationNoButton"
+            android:layout_weight="1.02"
+            android:textSize="30sp"
+            android:textColor="#fff"
+            android:background="#000" />
+        <View
+            android:layout_width="5dp"
+            android:background="#eeeeee"
+            android:paddingTop="50dp"
+            android:layout_height="50dp" />
+
+        <Button
+            android:text="@string/autenticationYesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/autenticationYesButton"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:textColor="#fff"
+            android:background="#000" />
+    </LinearLayout>
+
+</LinearLayout>

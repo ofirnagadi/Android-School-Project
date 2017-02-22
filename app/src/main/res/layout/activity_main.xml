@@ -1,17 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.ofirnagadi.ofirnagadi.project.MainActivity">
+    tools:context="com.ofirnagadi.ofirnagadi.project.MainActivity"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e1e1e1"
+        android:layout_weight="3">
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_settings"
+                android:id="@+id/imageSettings"
+                android:layout_weight="3"
+                android:background="#e1e1e1"
+                android:scaleType="fitCenter"
+                android:padding="20dp"
+                android:contentDescription="@string/imageSettings" />
+
+            <TextView
+                android:text="@string/settingsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/settingsTextView"
+                android:layout_weight="1"
+                android:gravity="top|center"
+                android:textStyle="normal|bold"
+                android:textSize="18sp"
+                android:textColor="#18517f" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_list"
+                android:id="@+id/imageLessoonesList"
+                android:layout_weight="3"
+                android:background="#e1e1e1"
+                android:scaleType="fitCenter"
+                android:padding="20dp"
+                android:contentDescription="@string/imageLessoonesList" />
+
+            <TextView
+                android:text="@string/listTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listTextView"
+                android:layout_weight="1"
+                android:gravity="top|center"
+                android:textStyle="normal|bold"
+                android:textSize="18sp"
+                android:textColor="#18517f" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_contacts"
+                android:id="@+id/imageContacts"
+                android:layout_weight="3"
+                android:background="#e1e1e1"
+                android:scaleType="fitCenter"
+                android:cropToPadding="false"
+                android:adjustViewBounds="false"
+                android:padding="20dp"
+                android:contentDescription="@string/imageContacts" />
+
+            <TextView
+                android:text="@string/contactsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/contactsTextView"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textColor="#18517f"
+                android:textStyle="normal|bold"
+                android:gravity="top|center" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:text="@string/mainToLessonstextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mainToLessonstextView"
+            android:textStyle="normal|bold"
+            android:textAlignment="center"
+            android:padding="4dp"
+            android:textSize="18sp" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/maintopLessonesList" />
+    </LinearLayout>
+
+</LinearLayout>

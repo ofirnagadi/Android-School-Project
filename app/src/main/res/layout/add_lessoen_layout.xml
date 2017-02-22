@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:weightSum="1"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/subjectEditText"
+        android:ems="10"
+        android:id="@+id/lessonSubjectEditText"
+        android:hint="@string/lessonSubjectEditText"
+        android:padding="15dp"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:singleLine="true" />
+
+    <TextView
+        android:text="@string/selectDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/selectDateTextView"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:textColor="#18517f"
+        android:textStyle="normal|bold|italic"
+        android:paddingTop="5dp"
+        android:paddingBottom="2dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dp">
+
+        <Button
+            android:text="@string/lessonEditDateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lessonEditDateButton"
+            android:onClick="showDatePickerDialog"
+            android:layout_weight="1"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="25dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:text="@string/startTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/startTextView"
+                android:textSize="22sp"
+                android:textStyle="normal|bold|italic"
+                android:textColor="#18517f"
+                android:layout_gravity="center"
+                android:paddingTop="5dp"
+                android:textAlignment="center" />
+
+            <Button
+                android:text="@string/lessonEditTimeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lessonEditTimeButton"
+                android:onClick="showTimePickerDialog"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:text="@string/endTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/endTextView"
+                android:textSize="22sp"
+                android:textStyle="normal|bold|italic"
+                android:textColor="#18517f"
+                android:layout_gravity="center"
+                android:paddingTop="5dp"
+                android:textAlignment="center" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/howLongEditText"
+                android:hint="Decimal"
+                android:singleLine="true"
+                android:layout_width="100dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:text="@string/createLessontButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/createLessontButton"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:onClick="addLessonOnClickListener"/>
+</LinearLayout>
