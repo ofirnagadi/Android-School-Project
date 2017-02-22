@@ -1,0 +1,338 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:padding="@dimen/widget_margin"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:text="My Lessons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewTitle"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:background="#18517f"
+        android:textColor="#fff"
+        android:textStyle="normal|bold"
+        android:textSize="20sp"
+        android:paddingBottom="2dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/LinearLayout1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="@string/lessoenListDateTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/widgetDateTextView1"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="normal|bold|italic"
+                android:textColor="#333333"
+                android:fontFamily="sans-serif" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:text="@string/lessoenListTimeFromTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/widgetTimeFromTextView1"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:text="@string/lessoenListToTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/widgetToTextView1"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:text="@string/lessoenListToTimeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/widgetToTimeTextView1"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="@string/mainListFullNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/widgetFullNameTextView1"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:textColor="#18517f"
+                android:maxLines="1"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:text="@string/lessoenListTitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/widgetTitleTextView1"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-smallcaps"
+                android:paddingBottom="5dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:textColor="#a20000" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/LinearLayout2">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="@string/lessoenListDateTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/widgetDateTextView2"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="normal|bold|italic"
+                android:textColor="#333333" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:text="@string/lessoenListTimeFromTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/widgetTimeFromTextView2"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:text="@string/lessoenListToTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/widgetToTextView2"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:text="@string/lessoenListToTimeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/widgetToTimeTextView2"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="@string/mainListFullNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/widgetFullNameTextView2"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:textColor="#18517f"
+                android:maxLines="1" />
+
+            <TextView
+                android:text="@string/lessoenListTitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/widgetTitleTextView2"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-smallcaps"
+                android:paddingBottom="5dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:textColor="#a20000" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/LinearLayout3">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="@string/lessoenListDateTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/widgetDateTextView3"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="normal|bold|italic"
+                android:textColor="#333333" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:text="@string/lessoenListTimeFromTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/widgetTimeFromTextView3"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:text="@string/lessoenListToTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/widgetToTextView3"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:text="@string/lessoenListToTimeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/widgetToTimeTextView3"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="normal|bold|italic"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="@string/mainListFullNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/widgetFullNameTextView3"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:textColor="#18517f"
+                android:maxLines="1" />
+
+            <TextView
+                android:text="@string/lessoenListTitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/widgetTitleTextView3"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-smallcaps"
+                android:paddingBottom="5dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:textColor="#a20000" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

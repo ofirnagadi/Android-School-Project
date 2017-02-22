@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.appwidget.AppWidgetManager;
+import android.content.ComponentName;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -222,6 +224,8 @@ public class ContactLessonesActivity extends AppCompatActivity {
                             qurey = Constants.Contact._ID + " = " + contactId;
                             dbWriter.delete(Constants.Contact.TABLE_NAME, qurey, null);
 
+                            updateAllWidgets();
+
                             //Return to contact intent:
                             Intent i = new Intent(myActivity, ContactActivity.class);
                             startActivity(i);
@@ -332,6 +336,9 @@ public class ContactLessonesActivity extends AppCompatActivity {
                     smsManager.sendTextMessage(studentPhone, null, massage, null, null);
                 }
 
+                //Update Widget:
+                updateAllWidgets();
+
                 closeDialog(autenticationDialog);
                 closeDialog(addLessoenDialog);
             }
@@ -340,6 +347,13 @@ public class ContactLessonesActivity extends AppCompatActivity {
         closeDialog(addLessoenDialog);
     }
 
+    private void updateAllWidgets(){
+        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
+        int[] appWidgetIds = appWidgetManager.getAppWidgetIds(new ComponentName(this, LessonsWidget.class));
+        if (appWidgetIds.length > 0) {
+            new LessonsWidget().onUpdate(this, appWidgetManager, appWidgetIds);
+        }
+    }
 
 
     private Cursor getLessoensListById(String id){
@@ -428,16 +442,4 @@ public class ContactLessonesActivity extends AppCompatActivity {
     //******** END Date Picker on Fragment Dialog**********//
 
 
-   /* private void setAlarmAlert(){
-        Intent myIntent = new Intent(ThisApp.this , myService.class);
-        AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
-        pendingIntent = PendingIntent.getService(ThisApp.this, 0, myIntent, 0);
-
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 12);
-        calendar.set(Calendar.MINUTE, 00);
-        calendar.set(Calendar.SECOND, 00);
-
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 24*60*60*1000 , pendingIntent);  //set repeating every 24 hours
-    }*/
 }

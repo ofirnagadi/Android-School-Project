@@ -16,7 +16,7 @@
     <string name="inContactAreatextView">Stuies Area</string>
     <string name="inContactPhonetextView">Phone Number</string>
     <string name="inContactDeleteButton">Delete Contact</string>
-    <string name="inContactAddButton">Add Lesson</string>
+    <string name="inContactAddButton">New Lesson</string>
     <string name="subjectEditText"></string>
     <string name="toTextView">To</string>
     <string name="selectDateTextView">Select Date:</string>
@@ -58,7 +58,7 @@
     <string name="teacherNameEditText">Teacher\'s Name</string>
     <string name="smsTextView">Send SMS</string>
     <string name="setButton">SET</string>
-    <string name="appwidget_text">EXAMPLE</string>
+    <string name="appwidget_text">My Private Lessons</string>
     <string name="configure">Configure</string>
     <string name="add_widget">Add widget</string>
 </resources>

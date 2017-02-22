@@ -37,7 +37,7 @@
             android:id="@+id/studentNameShowTextView"
             android:layout_weight="1"
             android:textSize="24sp"
-            android:fontFamily="cursive"
+            android:fontFamily="sans-serif"
             android:textColor="#000"
             android:textStyle="normal|bold" />
 
@@ -65,7 +65,7 @@
             android:id="@+id/dateShowTextView"
             android:layout_weight="1"
             android:textSize="24sp"
-            android:fontFamily="cursive"
+            android:fontFamily="sans-serif"
             android:textColor="#000"
             android:textStyle="normal|bold" />
 
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/timeLessonViewShowTextView"
             android:layout_weight="1"
-            android:fontFamily="cursive"
+            android:fontFamily="sans-serif"
             android:textSize="24sp"
             android:textStyle="normal|bold"
             android:textColor="#000" />
@@ -121,7 +121,7 @@
             android:id="@+id/descriptionShowLessonViewTextView"
             android:layout_weight="1"
             android:textSize="24sp"
-            android:fontFamily="cursive"
+            android:fontFamily="sans-serif"
             android:textStyle="normal|bold"
             android:textColor="#000" />
 
@@ -149,7 +149,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/deleteLessonViewButton"
             android:textSize="16sp"
-            android:background="#c91d12" />
+            android:background="#c91d12"
+            android:textStyle="normal|bold"
+            android:textColor="#fff" />
 
     </LinearLayout>
 </LinearLayout>

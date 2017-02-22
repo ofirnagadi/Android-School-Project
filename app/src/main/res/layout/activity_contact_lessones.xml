@@ -91,7 +91,9 @@
                 android:layout_weight="1"
                 android:background="#c91d12"
                 android:layout_height="wrap_content"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textColor="#fff"
+                android:textStyle="normal|bold" />
 
             <Button
                 android:text="@string/inContactAddButton"
@@ -99,8 +101,10 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/inContactAddButton"
                 android:layout_weight="1"
-                android:background="#f2efb3"
-                android:textSize="16sp" />
+                android:background="#60c71b"
+                android:textSize="16sp"
+                android:textColor="#fff"
+                android:textStyle="normal|bold" />
         </LinearLayout>
     </LinearLayout>
 

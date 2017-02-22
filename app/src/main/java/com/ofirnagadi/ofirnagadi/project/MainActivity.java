@@ -1,6 +1,8 @@
 package com.ofirnagadi.ofirnagadi.project;
 
 import android.Manifest;
+import android.appwidget.AppWidgetManager;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -86,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        updateAllWidgets();
     }
 
     private Cursor getSortedLessonsList(){
@@ -101,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
         this.lessonesCursor = getSortedLessonsList();
         this.mainCursorAdapter.changeCursor(lessonesCursor);
     }
-
 
     private class MyOnClickListener implements OnClickListener{
 
@@ -130,6 +131,13 @@ public class MainActivity extends AppCompatActivity {
                 }break;
 
             }
+        }
+    }
+    private void updateAllWidgets(){
+        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
+        int[] appWidgetIds = appWidgetManager.getAppWidgetIds(new ComponentName(this, LessonsWidget.class));
+        if (appWidgetIds.length > 0) {
+            new LessonsWidget().onUpdate(this, appWidgetManager, appWidgetIds);
         }
     }
 }

@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.appwidget.AppWidgetManager;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -130,9 +132,9 @@ public class LessonViewActivity extends AppCompatActivity {
                             String qurey = Constants.Lesson._LESSON_ID + " = " + lessonId;
                             dbWriter.delete(Constants.Lesson.TABLE_NAME, qurey, null);
 
-                            //Return to contact intent:
-//                            Intent i = new Intent(myActivity, ContactActivity.class);
-//                            startActivity(i);
+
+                            updateAllWidgets();
+
                             onBackPressed();
 
                         }
@@ -143,5 +145,12 @@ public class LessonViewActivity extends AppCompatActivity {
         }
     }
 
+    private void updateAllWidgets(){
+        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
+        int[] appWidgetIds = appWidgetManager.getAppWidgetIds(new ComponentName(this, LessonsWidget.class));
+        if (appWidgetIds.length > 0) {
+            new LessonsWidget().onUpdate(this, appWidgetManager, appWidgetIds);
+        }
+    }
     private void closeDialog (Dialog myDialog){myDialog.dismiss();}
 }
