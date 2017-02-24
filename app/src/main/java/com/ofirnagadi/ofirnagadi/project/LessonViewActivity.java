@@ -132,7 +132,6 @@ public class LessonViewActivity extends AppCompatActivity {
                             String qurey = Constants.Lesson._LESSON_ID + " = " + lessonId;
                             dbWriter.delete(Constants.Lesson.TABLE_NAME, qurey, null);
 
-
                             updateAllWidgets();
 
                             onBackPressed();

@@ -83,6 +83,7 @@ public class ContactLessonesActivity extends AppCompatActivity {
 
     //Shared Preferences
     private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor settingsEditor;
 
     //Const
     private final int MY_PERMISSIONS_REQUEST = 900;
@@ -326,8 +327,14 @@ public class ContactLessonesActivity extends AppCompatActivity {
                 lessonesCursor = getLessoensListById(contactId);
                 lessonesCursorAdapter.changeCursor(lessonesCursor);
 
+                int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.SEND_SMS);
+                if (permissionCheck != PackageManager.PERMISSION_GRANTED){
+                    settingsEditor.putBoolean(Constants.Settings.SMS_AUTH, false);
+                    settingsEditor.apply();
+                }
+                boolean smsAuth = sharedPreferences.getBoolean(Constants.Settings.SMS_AUTH, false);
                 //If true permission granted!!!
-                if(sharedPreferences.getBoolean(Constants.Settings.SMS_AUTH, false)){
+                if(smsAuth != false && (permissionCheck == PackageManager.PERMISSION_GRANTED) ){
                     String massage = "Private Lesson with the teacher "+
                             sharedPreferences.getString(Constants.Settings.TEACHER_NAME, "")+
                             " \nset to "+DatePickerFragment.dateString+ "\non "+TimePickerFragment.timeString;

@@ -73,6 +73,8 @@ public class SettingsActivity extends AppCompatActivity {
                         smsSwitch.setText("OFF");
                         smsSwitch.setTextColor(Color.parseColor("#e21b1b"));
                         switchAuth = false;
+                        settingsEditor.putBoolean(Constants.Settings.SMS_AUTH, switchAuth);
+                        settingsEditor.apply();
                         return;
                     }
 
